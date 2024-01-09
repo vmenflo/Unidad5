@@ -38,7 +38,7 @@ public class LanzarDado {
         this.lista = new ArrayList<>();
         for (int i = 0; i < numero; i++) {
             aleatorio = r.nextInt(NUM_MIN, NUM_MAX);
-
+            //Me genera un aleatorio y lo añade a la lista
             this.lista.add(aleatorio);
         }
     }
@@ -94,6 +94,7 @@ public class LanzarDado {
         while(it.hasNext()){ //Mientras halla elementos
             int numero = it.next();
             if(numero==entero){
+                //Si coincide lo borra
                 it.remove();
             }
            

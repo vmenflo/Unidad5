@@ -33,24 +33,27 @@ public class Main {
         for (Character aux : lista2) {
             System.out.println(aux);
         }
-        
+
         //Generamos la lista 3
-        ArrayList<Character> lista3= generarArraySobrante(lista, lista2);
+        ArrayList<Character> lista3 = generarArraySobrante(lista, lista2);
         //Lo mostramos usando Lambda
         System.out.println("Lista 3: ");
         lista3.forEach(System.out::println);
-        
+
     }
 
     //Crear Arraylist aleatorias
     public static ArrayList<Character> generarArrayList() {
+        //Creo la ArrayList de Character
         ArrayList<Character> lista = new ArrayList<>();
-        Random r = new Random();
+        //Creo objeto random
+        Random r = new Random(); 
         int tamañoAleatorio = r.nextInt(10, 21);
-
+        
+        //Bucle para rellenar la lista
         for (int i = 0; i < tamañoAleatorio; i++) {
             char aleatorioLetra = (char) r.nextInt(97, 123);
-
+            //Selecciona aleatoriamente un entero que equivale a una letra char
             lista.add(aleatorioLetra);
         }
         return lista;
@@ -60,12 +63,12 @@ public class Main {
     public static ArrayList<Character> generarArraySobrante(
             ArrayList<Character> lista1, ArrayList<Character> lista2) {
         ArrayList<Character> lista = new ArrayList<>();
-        char letra='a';
-        for(int i=0;i<25;i++){
-            if((lista1.contains(letra))&&!(lista2.contains(letra))){
+        char letra = 'a';
+        for (int i = 0; i < 25; i++) {
+            if ((lista1.contains(letra)) && !(lista2.contains(letra))) {
                 lista.add(letra);
-            }
-            letra++;
+            }//Si la letra esta en la lista1 y no en la lista2, la añade
+            letra++;//La sumo para que elija la próxima letra
         }
         return lista;
     }

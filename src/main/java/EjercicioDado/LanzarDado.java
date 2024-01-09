@@ -20,7 +20,7 @@ public class LanzarDado {
     final int NUMERO_LIMITE_1000 = 1000;
     private ArrayList<Integer> lista; //Array
     private int aleatorio = 0;
-    Random r = new Random(); //Creamos el objeto aleatorio
+    private Random r = new Random(); //Creamos el objeto aleatorio
 
     //Constructor con 1_000 lanzamientos
     public LanzarDado() {

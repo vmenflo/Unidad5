@@ -38,7 +38,7 @@ public class Main {
         ArrayList<Character> lista3 = generarArraySobrante(lista, lista2);
         //Lo mostramos usando Lambda
         System.out.println("Lista 3: ");
-        lista3.forEach(System.out::println);
+        lista3.forEach(e->System.out.println(e));;
 
     }
 

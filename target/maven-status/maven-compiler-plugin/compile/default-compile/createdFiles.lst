@@ -1,2 +1,4 @@
-newpackage/CatalogoLibros.class
-newpackage/Libro.class
+CollectionsYComparator/Series.class
+CollectionsYComparator/GuiaSeries.class
+CollectionsYComparator/Libro.class
+CollectionsYComparator/CatalogoLibros.class

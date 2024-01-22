@@ -1,4 +1,7 @@
-CollectionsYComparator/Series.class
-CollectionsYComparator/GuiaSeries.class
-CollectionsYComparator/Libro.class
-CollectionsYComparator/CatalogoLibros.class
+MatricesBi\matricesBi.class
+MatricesBi\ejercicioMatricesBi.class
+CollectionsYComparator\Libro.class
+CollectionsYComparator\Series.class
+CollectionsYComparator\GuiaSeries.class
+CollectionsYComparator\CatalogoLibros.class
+CollectionsYComparator\NewRecord.class

@@ -11,6 +11,7 @@ import java.util.Scanner;
  * @author Víctor
  */
 public class ejercicioMatricesBi {
+
     public static void main(String[] args) {
         /*Realiza un programa que pida al usario el número de filas y columnas
         de un array bidimensional de números enteros. El programa crea la matriz
@@ -20,29 +21,45 @@ public class ejercicioMatricesBi {
         //Pedimos al usuario las dimensiones
         Scanner teclado = new Scanner(System.in);
         System.out.println("¿Cuántas filas quieres hacer la matriz?");
-        int numeroFilas=teclado.nextInt();
+        int numeroFilas = teclado.nextInt();
         System.out.println("¿Y, Cuántas columnas?");
-        int numeroColumnas=teclado.nextInt();
-        
+        int numeroColumnas = teclado.nextInt();
+
         //Creamos la matriz
         int[][] matriz = new int[numeroFilas][numeroColumnas];
-       //Rellenamos mediante un bucle for
-        for(int i=0;i<matriz.length;i++){
-            for(int j=0;j<matriz[i].length;j++){
-                System.out.println("Fila " + i + ", columna "+j
+        //Rellenamos mediante un bucle for
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.println("Fila " + i + ", columna " + j
                         + " que valor quieres introducir? : ");
-                matriz[i][j]=teclado.nextInt();
+                matriz[i][j] = teclado.nextInt();
             }
         }
-        
+
         //Lo mostramos
         System.out.println("Esta es la matriz");
-        for(int i=0;i<matriz.length;i++){
-            for(int j=0;j<matriz[i].length;j++){
-                System.out.println("Fila " + i + ", Fila "+j
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.println("Fila " + i + ", Fila " + j
                         + " : " + matriz[i][j]);
             }
         }
+
+        //Sumatoria
+        int sumatoria = sumatoria(matriz);
+        System.out.println(sumatoria);
+
     }
-    
+    //Método para hacer la sumatoria de los numeros de la raiz
+
+    public static int sumatoria(int[][] matriz) {
+        int sumatoria = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                sumatoria += matriz[i][j];
+            }
+        }
+        return sumatoria;
+    }
+
 }

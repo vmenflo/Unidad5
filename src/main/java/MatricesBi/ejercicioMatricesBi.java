@@ -9,6 +9,8 @@ import java.util.Scanner;
 /**
  *
  * @author Víctor
+ *
+ * 
  */
 public class ejercicioMatricesBi {
 
@@ -46,20 +48,17 @@ public class ejercicioMatricesBi {
         }
 
         //Sumatoria
-        int sumatoria = sumatoria(matriz);
+        int sumatoria = MetodosEjercicioMatrices.sumatoria(matriz);
         System.out.println(sumatoria);
-
+        
+        System.out.println("Apariencia de matriz");
+        MetodosEjercicioMatrices.matrizTabulada(matriz);
+        int suma=MetodosEjercicioMatrices.sumarfilas(matriz, 1);
+        System.out.println("La suma de la fila 2 es: "+suma);
+        
+        int s = MetodosEjercicioMatrices.sumarColumnas(matriz, 1);
+        System.out.println("La suma de las columnas 2 es: " + s);
     }
-    //Método para hacer la sumatoria de los numeros de la raiz
-
-    public static int sumatoria(int[][] matriz) {
-        int sumatoria = 0;
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                sumatoria += matriz[i][j];
-            }
-        }
-        return sumatoria;
-    }
+    
 
 }

@@ -19,7 +19,7 @@ public class Asiento {
     //Constructor
     public Asiento() {
         //Va añadiendo los asientos de forma automatica
-        this.asiento= contador++;
+        this.asiento= contador++;//Controlar limite
         if(contadorChar>68){
             contadorChar=65;
         }

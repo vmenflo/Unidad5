@@ -12,14 +12,20 @@ import MatricesBi.Autobus.Autobus;
  */
 public class Main {
     public static void main(String[] args) {
-        Autobus bus = new Autobus();
-        System.out.println(bus);
-        
-        
-        bus.getAutobus()[0][1].setLibre(false);
-        System.out.println(bus);
-        
-        lasVecinas.mostrarVecinas(bus, 1, 0);
-        
+        int[][] matriz = new int[5][5];
+        int acumulador=0;
+        for(int i=0; i<matriz.length;i++){
+            for(int j=0;j<matriz[i].length;j++){
+                matriz[i][j]=++acumulador;
+            }
+        }
+        for (int[] matriz1 : matriz) {
+            for (int j = 0; j < matriz1.length; j++) {
+                System.out.print(matriz1[j] + " ");
+            }
+            System.out.println();
+        }
+       
+        LasVecinas.lasVecinas.mostrarVecinas(matriz, 2, 2);
     }
 }
